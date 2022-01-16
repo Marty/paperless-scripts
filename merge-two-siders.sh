@@ -1,8 +1,11 @@
+#!/bin/bash
+
 # Lists pdfs in a directory and if it contains more than two, merges the first two into one.
 # It does so by running a ghostscript docker container.
 # Afterwards it moves the merged file into the paperless consume directory and deletes the original files.
-
-#!/bin/bash
+#
+# Run this via crontab like this:
+#  */2 * * * * /path/to/script/merge-two-siders.sh 2> /path/to/paperless/consume/two-siders/merge.log
 
 set -eu
 
